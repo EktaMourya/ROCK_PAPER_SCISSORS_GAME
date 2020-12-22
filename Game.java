@@ -1,13 +1,11 @@
 import java.util.*;
-
 public class Game 
 {
-    
     public static final String ROCK = "ROCK";
     public static final String PAPER = "PAPER";
     public static final String SCISSORS = "SCISSORS";
 
-    public static void main(String args[]) 
+     public static void main(String args[]) 
     {
       System.out.println("Enter any one of the following inputs:  ");
       System.out.println("ROCK");
@@ -18,30 +16,17 @@ public class Game
       String playerMove = getPlayerMove();
       String computerMove = getComputerMove(); 
  
-      //Rules of the Game Applied Below:
-      /*if both playerMove and computerMove
-        produces the same formation, then 
-        Game is a tie*/
       if (playerMove.equals(computerMove))
             System.out.println("Game is Tie !!");
-          
-
-      // if playerMove is ROCK         
       else if (playerMove.equals(Game.ROCK))
         System.out.println(computerMove.equals(Game.PAPER) ? "Computer Wins": "Player wins");   
-      // if playerMove is PAPER
       else if (playerMove.equals(Game.PAPER))
         System.out.println(computerMove.equals(Game.SCISSORS) ? "Computer Wins": "Player wins");   
-      // if playerMove is SCISSORS    
       else if(playerMove.equals(Game.SCISSORS))
         System.out.println(computerMove.equals(Game.ROCK) ? "Computer Wins": "Player wins"); 
-      // if playerMove is invalid
       else
         System.out.println("Invalid Move");  
     }
-    
-    /* Get Computer's move using Random 
-       class nextInt() method */   
     public static String getComputerMove()
     {
         String computermove;
@@ -58,9 +43,6 @@ public class Game
         System.out.println();
         return computermove;    
     }
-    
-    /* Get Player's move using Scanner
-       class */
     public static String getPlayerMove()
     {
         Scanner in = new Scanner(System.in);
